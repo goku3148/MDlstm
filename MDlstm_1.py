@@ -9,25 +9,21 @@ class LSTMCell(nn.Module):
         self.hidden_size = hidden_size
         self.device = device
 
-        # Input gate weights
         self.W_ii = nn.Parameter(torch.Tensor(hidden_size, input_size))
         self.W_hi = nn.Parameter(torch.Tensor(hidden_size, hidden_size))
         self.b_ii = nn.Parameter(torch.Tensor(hidden_size))
         self.b_hi = nn.Parameter(torch.Tensor(hidden_size))
 
-        # Forget gate weights
         self.W_if = nn.Parameter(torch.Tensor(hidden_size, input_size))
         self.W_hf = nn.Parameter(torch.Tensor(hidden_size, hidden_size))
         self.b_if = nn.Parameter(torch.Tensor(hidden_size))
         self.b_hf = nn.Parameter(torch.Tensor(hidden_size))
 
-        # Cell gate weights
         self.W_ig = nn.Parameter(torch.Tensor(hidden_size, input_size))
         self.W_hg = nn.Parameter(torch.Tensor(hidden_size, hidden_size))
         self.b_ig = nn.Parameter(torch.Tensor(hidden_size))
         self.b_hg = nn.Parameter(torch.Tensor(hidden_size))
-
-        # Output gate weights
+        
         self.W_io = nn.Parameter(torch.Tensor(hidden_size, input_size))
         self.W_ho = nn.Parameter(torch.Tensor(hidden_size, hidden_size))
         self.b_io = nn.Parameter(torch.Tensor(hidden_size))
@@ -43,16 +39,6 @@ class LSTMCell(nn.Module):
                 nn.init.zeros_(p.data)
 
     def forward(self, x, init_states=None):
-        """
-        Forward pass for a single time step.
-
-        Args:
-            x (torch.Tensor): Input tensor for a single time step.
-            init_states (tuple): Initial hidden and cell states. If None, initializes to zeros.
-
-        Returns:
-            tuple: Updated hidden and cell states.
-        """
 
         h_t, c_t = (torch.zeros(self.hidden_size).to(self.self.device), torch.zeros(self.hidden_size).to(self.device)) \
             if init_states is None else init_states
