@@ -37,7 +37,7 @@ To use the model, instantiate the V_2 class with the desired parameters and pass
 
 ```
 import torch
-from MDlstm import V_2
+from Mdlstm import V_2
 
 # Define device
 device = torch.device('cpu')
