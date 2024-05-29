@@ -1,3 +1,6 @@
+
+!(/assets/images/)
+
 # Overview
 This repository contains an implementation of a custom neural network model using PyTorch. The model architecture is designed to explore advanced concepts in recurrent neural networks and aims to provide a flexible framework for experimenting with different configurations.
 
@@ -32,7 +35,7 @@ Usage
 To use the model, instantiate the V_2 class with the desired parameters and pass the input tensor through it.
 
 python
-Copy code
+
 import torch
 
 # Define device
