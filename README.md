@@ -34,8 +34,8 @@ forward(): Defines the forward pass through all layers of Branch_Cell, sequentia
 Usage
 To use the model, instantiate the V_2 class with the desired parameters and pass the input tensor through it.
 
-python
 
+```
 import torch
 
 # Define device
@@ -50,15 +50,16 @@ X = torch.rand(30, 5, dtype=torch.float32)
 # Forward pass
 output = model(X)
 print(output)
-Requirements
-torch
+```
+# Requirements
+torch,
 numpy
-Installation
+# Installation
 Clone the repository:
-bash
-Copy code
-git clone https://github.com/your-username/experimental-model.git
-Install the required packages:
-bash
-Copy code
-pip install torch numpy
+```
+git clone https://github.com/goku3148/MDlstm.git
+````
+# Install the required packages:
+```
+pip install torch, numpy
+```
