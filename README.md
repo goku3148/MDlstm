@@ -1,5 +1,5 @@
 
-!(/assets/images/architecture.png)
+![](/assets/images/architecture_1.png)
 
 # Overview
 This repository contains an implementation of a custom neural network model using PyTorch. The model architecture is designed to explore advanced concepts in recurrent neural networks and aims to provide a flexible framework for experimenting with different configurations.
